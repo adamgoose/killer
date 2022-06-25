@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import { store } from './killer/state.js'
+import { useStore } from './killer/store.js'
 import Calculator from './killer/Calculator.vue'
+
+const store = useStore()
 </script>
 
 <template>

@@ -1,14 +1,10 @@
 <script setup lang="ts">
 import _ from 'lodash'
 import { reactive, ref, computed } from 'vue'
-import { store } from './state.js'
+import { useStore } from './store.js'
 
+const store = useStore()
 const digits = store.digits
-
-function save() {
-  store.cages.push(store.cage)
-  store.newCage()
-}
 </script>
 
 <template>
@@ -45,7 +41,7 @@ function save() {
       </div>
     </div>
 
-    <button @click="save">Save</button>
+    <button @click="store.save">Save</button>
   </section>
 </template>
 
