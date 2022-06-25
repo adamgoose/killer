@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useStore } from './killer/store.js'
+import CageList from './killer/CageList.vue'
 import Calculator from './killer/Calculator.vue'
 
 const store = useStore()
@@ -16,9 +17,7 @@ const store = useStore()
 
     <Calculator class="bg-white p-8 md:p-12 my-10 rounded-lg shadow-2xl" />
 
-    <div class="bg-white p-8 md:p-12 my-10 rounded-lg shadow-2xl">
-      {{ store.cages }}
-    </div>
+    <CageList class="bg-white p-8 md:p-12 my-10 rounded-lg shadow-2xl" />
 
   </main>
 </template>

@@ -20,6 +20,9 @@ export const useStore = defineStore('main', {
       this.cages.push(this.cage)
       this.cage = newCage(this.nextCageId)()
       this.nextCageId++
+    },
+    destroyCageAt(i: number) {
+      this.cages.splice(i, 1)
     }
   }
 })
@@ -47,7 +50,7 @@ export function newCage(id: number) {
     state: (): cageState => ({
       sum: 10,
       size: 2,
-      required: [],
+      required: [1],
       restricted: []
     }),
     actions: {
